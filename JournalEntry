@@ -1,0 +1,37 @@
+{
+  "name": "JournalEntry",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "gratitude",
+        "reflection",
+        "dream",
+        "diary",
+        "emotion"
+      ],
+      "default": "gratitude"
+    },
+    "content": {
+      "type": "string"
+    },
+    "mood": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "type",
+    "content"
+  ]
+}
