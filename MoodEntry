@@ -1,0 +1,39 @@
+{
+  "name": "MoodEntry",
+  "type": "object",
+  "properties": {
+    "mood": {
+      "type": "string",
+      "enum": [
+        "amazing",
+        "happy",
+        "good",
+        "okay",
+        "sad",
+        "stressed",
+        "anxious",
+        "tired"
+      ]
+    },
+    "mood_score": {
+      "type": "number"
+    },
+    "note": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "mood",
+    "date"
+  ]
+}
