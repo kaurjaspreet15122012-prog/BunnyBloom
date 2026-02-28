@@ -1,0 +1,35 @@
+{
+  "name": "ActivityLog",
+  "type": "object",
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "visit",
+        "signup",
+        "login",
+        "tool_use",
+        "task_complete",
+        "achievement",
+        "reward",
+        "mood_log"
+      ]
+    },
+    "tool_name": {
+      "type": "string"
+    },
+    "nickname": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "coins_earned": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "action_type"
+  ]
+}
